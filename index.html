@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malavika's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        section {
+            padding: 4rem 2rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about {
+            background: #fff;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .interests {
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .interests h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .interest-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .interest-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .skills {
+            background: #fff;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .skill-tag {
+            background: #f6d365;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            .interests-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div>
+            <h1>Malavika</h1>
+            <p>Student at Saintgits College of Engineering</p>
+            <p>Currently participating in Tin-Her-Hack Hackathon</p>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate learner currently exploring web development. I believe in continuous growth and enjoy taking on new challenges.</p>
+    </section>
+
+    <section class="interests">
+        <h2>My Interests</h2>
+        <div class="interests-grid">
+            <div class="interest-item">
+                <h3>Swimming</h3>
+            </div>
+            <div class="interest-item">
+                <h3>Dancing</h3>
+            </div>
+            <div class="interest-item">
+                <h3>Music</h3>
+            </div>
+            <div class="interest-item">
+                <h3>Traveling</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span class="skill-tag">Leadership</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Active Listening</span>
+            <span class="skill-tag">Web Development</span>
+        </div>
+    </section>
+</body>
+</html>
