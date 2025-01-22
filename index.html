@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,108 +16,126 @@
 
     body {
       font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
+      background-color: #f0f0f0;
       color: #333;
+      line-height: 1.6;
     }
 
     h1, h2, h3 {
-      color: #222;
+      color: #333;
     }
 
-    /* Navbar Styles */
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    /* Navbar */
     nav {
       background-color: #333;
-      color: white;
-      padding: 15px;
+      color: #fff;
+      padding: 15px 20px;
       text-align: center;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
+      color: #fff;
       font-weight: bold;
+      margin: 0 15px;
+      font-size: 1.1rem;
     }
 
     nav a:hover {
-      color: #a1c4fd;
+      color: #f4c542;
     }
 
-    /* Section Styles */
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, #5c6bc0, #3f51b5);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    /* Section Styling */
     section {
       padding: 60px 20px;
       text-align: center;
     }
 
-    .intro, .skills, .contact {
-      background-color: white;
-      margin: 30px auto;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      max-width: 900px;
-    }
-
-    .intro h2, .skills h2, .contact h2 {
-      font-size: 1.5em;
+    .section-title {
+      font-size: 2rem;
       margin-bottom: 20px;
     }
 
-    .intro p, .skills p, .contact p {
-      font-size: 1.1em;
-      margin-bottom: 10px;
+    .intro, .skills, .contact {
+      background-color: white;
+      padding: 40px;
+      margin: 20px auto;
+      border-radius: 8px;
+      max-width: 900px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
-    /* Skills List */
+    .intro p, .skills p, .contact p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Skills Section */
     .skills ul {
       list-style: none;
-      margin: 20px 0;
+      padding: 0;
     }
 
     .skills ul li {
-      background-color: #e0e0e0;
-      padding: 10px;
+      background-color: #f4f4f4;
+      padding: 15px;
       margin-bottom: 10px;
       border-radius: 5px;
       font-weight: bold;
-    }
-
-    .skills ul li:last-child {
-      margin-bottom: 0;
+      font-size: 1.1rem;
     }
 
     /* Contact Section */
-    .contact p {
-      font-size: 1.1em;
-    }
-
     .contact a {
-      text-decoration: none;
-      color: #333;
-      background-color: #f4c542;
-      padding: 10px 20px;
-      border-radius: 5px;
+      color: white;
+      background-color: #3f51b5;
+      padding: 12px 20px;
+      text-transform: uppercase;
       font-weight: bold;
+      border-radius: 5px;
+      margin-top: 10px;
     }
 
     .contact a:hover {
-      background-color: #d1b038;
+      background-color: #5c6bc0;
     }
 
-    /* Footer Styles */
+    /* Footer Section */
     footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 15px;
-      position: absolute;
+      position: relative;
       bottom: 0;
       width: 100%;
     }
 
     footer p {
-      margin: 5px;
+      margin: 10px 0;
     }
 
     /* Responsive Design */
@@ -127,63 +146,72 @@
 
       nav a {
         margin: 0 10px;
+        font-size: 1rem;
       }
 
-      section {
-        padding: 40px 20px;
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
       }
 
       .intro, .skills, .contact {
         padding: 30px;
       }
-
-      .skills ul {
-        padding-left: 20px;
-      }
-
-      footer {
-        font-size: 0.9em;
-      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar Section -->
   <nav>
-    <a href="#intro">Home</a>
+    <a href="#hero">Home</a>
+    <a href="#intro">About Me</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Intro Section -->
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <h1>Welcome to My Personal Website</h1>
+    <p>I'm Malavika, a BTech student passionate about technology and learning new things every day.</p>
+  </section>
+
+  <!-- About Me Section -->
   <section id="intro" class="intro">
-    <h2>Welcome to My Personal Website</h2>
-    <p>Hi! I'm Malavika, a BTech student in Electronics and Computer Engineering at Saintgits College of Engineering. I am passionate about learning new things every day, exploring technologies, and sharing my knowledge with others.</p>
-    <p>In my free time, I love swimming, dancing, listening to music, spending time with my friends, and traveling.</p>
-    <p>Currently, I am learning how to build websites and exploring various tools and technologies in the field of computer engineering.</p>
+    <h2 class="section-title">About Me</h2>
+    <p>I'm currently pursuing BTech in Electronics and Computer Engineering at Saintgits College of Engineering. I have a deep love for swimming, dancing, listening to music, spending time with my friends, and traveling.</p>
+    <p>I'm always eager to learn new things and explore the world of technology. Currently, I'm learning how to create websites and expanding my skills as a tech enthusiast.</p>
   </section>
 
   <!-- Skills Section -->
   <section id="skills" class="skills">
-    <h2>Skills & Abilities</h2>
-    <p>Throughout my journey, I have developed various skills that I am proud of:</p>
+    <h2 class="section-title">Skills & Abilities</h2>
+    <p>Some of the key skills I have developed over time are:</p>
     <ul>
       <li>Leadership</li>
-      <li>Problem-solving</li>
+      <li>Listening to Problems & Finding Solutions</li>
       <li>Teamwork & Collaboration</li>
-      <li>Communication</li>
-      <li>Listening & Finding Solutions</li>
+      <li>Problem-Solving</li>
+      <li>Creativity</li>
     </ul>
-    <p>Currently, I am attending Tin-Her-Hack, a hackathon, and learning more about problem-solving and coding.</p>
+    <p>Currently, I am participating in Tin-Her-Hack, a hackathon where I'm enhancing my coding and problem-solving skills.</p>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>If you want to get in touch or collaborate, feel free to contact me via email or Instagram:</p>
+    <h2 class="section-title">Contact Me</h2>
+    <p>Feel free to reach out for collaborations or inquiries. You can contact me through the following:</p>
     <p>Email: <a href="mailto:malavikaharidas29@gmail.com">malavikaharidas29@gmail.com</a></p>
     <p>Instagram: <a href="https://www.instagram.com/ma_la_vi_ka_29/?next=%2F" target="_blank">Follow me on Instagram</a></p>
+    <a href="mailto:malavikaharidas29@gmail.com">Contact via Email</a>
   </section>
 
   <!-- Footer Section -->
@@ -192,4 +220,7 @@
   </footer>
 
 </body>
+
 </html>
+
+
