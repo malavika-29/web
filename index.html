@@ -1,170 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malavika's Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Malavika's Personal Website</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            line-height: 1.6;
-            color: #333;
-        }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
 
-        section {
-            padding: 4rem 2rem;
-        }
+    h1, h2, h3 {
+      color: #222;
+    }
 
-        .hero {
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
+    /* Navbar Styles */
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+    nav a:hover {
+      color: #a1c4fd;
+    }
 
-        .about {
-            background: #fff;
-            text-align: center;
-        }
+    /* Section Styles */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-        .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #333;
-        }
+    .intro, .skills, .contact {
+      background-color: white;
+      margin: 30px auto;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+    }
 
-        .interests {
-            background: #f9f9f9;
-            text-align: center;
-        }
+    .intro h2, .skills h2, .contact h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
 
-        .interests h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
+    .intro p, .skills p, .contact p {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
 
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    /* Skills List */
+    .skills ul {
+      list-style: none;
+      margin: 20px 0;
+    }
 
-        .interest-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
+    .skills ul li {
+      background-color: #e0e0e0;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
 
-        .interest-item:hover {
-            transform: translateY(-5px);
-        }
+    .skills ul li:last-child {
+      margin-bottom: 0;
+    }
 
-        .skills {
-            background: #fff;
-            text-align: center;
-        }
+    /* Contact Section */
+    .contact p {
+      font-size: 1.1em;
+    }
 
-        .skills h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
+    .contact a {
+      text-decoration: none;
+      color: #333;
+      background-color: #f4c542;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
 
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .contact a:hover {
+      background-color: #d1b038;
+    }
 
-        .skill-tag {
-            background: #f6d365;
-            padding: 0.5rem 1.5rem;
-            border-radius: 25px;
-            color: white;
-            font-weight: bold;
-        }
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
+    footer p {
+      margin: 5px;
+    }
 
-            section {
-                padding: 2rem 1rem;
-            }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav {
+        padding: 10px;
+      }
 
-            .interests-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+      nav a {
+        margin: 0 10px;
+      }
+
+      section {
+        padding: 40px 20px;
+      }
+
+      .intro, .skills, .contact {
+        padding: 30px;
+      }
+
+      .skills ul {
+        padding-left: 20px;
+      }
+
+      footer {
+        font-size: 0.9em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <section class="hero">
-        <div>
-            <h1>Malavika</h1>
-            <p>Student at Saintgits College of Engineering</p>
-            <p>Currently participating in Tin-Her-Hack Hackathon</p>
-        </div>
-    </section>
 
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate learner currently exploring web development. I believe in continuous growth and enjoy taking on new challenges.</p>
-    </section>
+  <!-- Navbar Section -->
+  <nav>
+    <a href="#intro">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section class="interests">
-        <h2>My Interests</h2>
-        <div class="interests-grid">
-            <div class="interest-item">
-                <h3>Swimming</h3>
-            </div>
-            <div class="interest-item">
-                <h3>Dancing</h3>
-            </div>
-            <div class="interest-item">
-                <h3>Music</h3>
-            </div>
-            <div class="interest-item">
-                <h3>Traveling</h3>
-            </div>
-        </div>
-    </section>
+  <!-- Intro Section -->
+  <section id="intro" class="intro">
+    <h2>Welcome to My Personal Website</h2>
+    <p>Hi! I'm Malavika, a BTech student in Electronics and Computer Engineering at Saintgits College of Engineering. I am passionate about learning new things every day, exploring technologies, and sharing my knowledge with others.</p>
+    <p>In my free time, I love swimming, dancing, listening to music, spending time with my friends, and traveling.</p>
+    <p>Currently, I am learning how to build websites and exploring various tools and technologies in the field of computer engineering.</p>
+  </section>
 
-    <section class="skills">
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <span class="skill-tag">Leadership</span>
-            <span class="skill-tag">Problem Solving</span>
-            <span class="skill-tag">Active Listening</span>
-            <span class="skill-tag">Web Development</span>
-        </div>
-    </section>
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <h2>Skills & Abilities</h2>
+    <p>Throughout my journey, I have developed various skills that I am proud of:</p>
+    <ul>
+      <li>Leadership</li>
+      <li>Problem-solving</li>
+      <li>Teamwork & Collaboration</li>
+      <li>Communication</li>
+      <li>Listening & Finding Solutions</li>
+    </ul>
+    <p>Currently, I am attending Tin-Her-Hack, a hackathon, and learning more about problem-solving and coding.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>If you want to get in touch or collaborate, feel free to contact me via email or Instagram:</p>
+    <p>Email: <a href="mailto:malavikaharidas29@gmail.com">malavikaharidas29@gmail.com</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/ma_la_vi_ka_29/?next=%2F" target="_blank">Follow me on Instagram</a></p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Malavika. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
